@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Tip calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>INTERACTIVE TIP CALCULATOR</h1>
+    </header>
+    <main class="calculator-container">
+        <section class="input-section">
+            <h2 id="inputs-heading">Enter Details</h2>
+            <div class="form-control">
+                <label for="bill">Bill</label>
+                <input type="number" id="bill" class="input-field" placeholder="0" min="0">
+            </div>
+            <div class="form-control">
+                <p>Select tip %</p>
+                <div class="tip-buttons-container">
+                    <button type="button" class="tip-percent-btn" data-tip="5">5%</button>
+                    <button type="button" class="tip-percent-btn" data-tip="10">10%</button>
+                    <button type="button" class="tip-percent-btn" data-tip="15">15%</button>
+                    <button type="button" class="tip-percent-btn" data-tip="25">25%</button>
+                    <button type="button" class="tip-percent-btn" data-tip="50">50%</button>
+                    <input type="number" id="custom-tip" class="input-field tip-custom-input" placeholder="custom"
+                        min="0">
+                </div>
+            </div>
+            <div class="form-control">
+                <label for="num-people">No. of people</label>
+                <input type="number" id="num-people" class="input-field" placeholder="1" min="1">
+            </div>
+        </section>
+
+        <section class="output-section" aria-labelledby="results-heading">
+            <h2 id="results-heading">Results</h2>
+            <div class="result-line">
+                <div class="result-label">
+                    <p>Tip Amount</p>
+                    <span>/ Person</span>
+                </div>
+                <div class="result-value">
+                    <span id="tip-amount-display" aria-live="polite">$0.00</span>
+                </div>
+            </div>
+            <div class="result-line">
+                <div class="result-label">
+                    <p>Total Amount</p>
+                    <span>/ Person</span>
+                </div>
+                <div class="result-value">
+                    <span id="total-amount-display" aria-live="polite">$0.00</span>
+                </div>
+            </div>
+            <button type="button" id="reset-button" class="reset-btn">RESET</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Nikhil Kumar/App</p>
+    </footer>
+    <script src="script.js" defer></script>
+</body>
+
+</html>
